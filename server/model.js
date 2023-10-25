@@ -17,13 +17,14 @@ export async function getDishes() {
 export async function getDishesByTag(tags) {
     // Query the database and return the dish with a matching id or null
 
-    // Define the SQL query to fetch the dish with the specified id from the 'dishes' table
-    const queryText = "SELECT * FROM dishes WHERE tag = $1";
+    // Define the SQL query to fetch the dish with the specified tag from the 'dishes' table
+    const queryText = "SELECT * FROM dishes WHERE tags = $1";
 
     // Use the pool object to send the query to the database
     // passing the id as a parameter to prevent SQL injection
-    const result = await pool.query(queryText, [tags]);
+    const result = await pool.query(queryText, ["meat", "vegetarian"]);
+   // const result = await pool.query(queryText, ["vegetarian"]);
 
     // The rows property of the result object contains the retrieved records
-    return result.rows[0] || null;
+    return result.rows;
   }
