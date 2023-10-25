@@ -1,9 +1,9 @@
 const array = [
 	{
-		title: "Title 1",
+		title: "Title yyy 1",
 		img: "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
 		bodyText:
-			"Some quick example text to build on the card title and make up the bulk of the card's content.",
+			"Some xo quick example text to build on the card title and make up the bulk of the card's content.",
 		link: "#",
 	},
 	{
@@ -27,19 +27,6 @@ const array = [
 // const res = await fetch("http://localhost:6006/dishes");
 // const recipes = await res.json();
 // const recipeArray = await recipes.data;
-
-array.map((obj) => {
-	document.querySelector(".feed").innerHTML += `
-
-<div class="card container">
-  <img src="${obj.img}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${obj.title}</h5>
-    <p class="card-text">${obj.bodyText}</p>
-    <a href="${obj.link}" class="btn">Go somewhere</a>
-  </div>
-</div>`;
-});
 
 let toggle = true;
 const searchButton = document.querySelector(".search-button");
@@ -70,8 +57,25 @@ function handleToggle() {
 }
 
 const searchBox = document.querySelector(".search-box");
-let searchText = (searchBox.oninput = () => {
-	return searchBox.value;
+let searchText = "";
+
+searchBox.addEventListener("input", () => {
+	searchText = searchBox.value;
 });
 
-console.log(searchText);
+// If we can get the value of the searchBox.value into the searchText this will automatically filter using the filter function below.
+
+array
+	.filter((e) => e.bodyText.includes(`${searchText}`))
+	.map((obj) => {
+		document.querySelector(".feed").innerHTML += `
+
+<div class="card container">
+  <img src="${obj.img}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${obj.title}</h5>
+    <p class="card-text">${obj.bodyText}</p>
+    <a href="${obj.link}" class="btn">Go somewhere</a>
+  </div>
+</div>`;
+	});
