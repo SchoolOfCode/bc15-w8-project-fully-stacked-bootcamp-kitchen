@@ -140,7 +140,12 @@ padding-bottom: 2rem;
     font-size: var(--font-size-title);
 
 }
-
+.search-div {
+margin-top: -2rem;
+}
+/* .landing-top{
+    all: 
+} */
 .feed--logo {
 }
 
