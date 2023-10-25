@@ -1,4 +1,5 @@
 import * as model from "./server/model.js";
+import { app } from "./client/app.js";
 
 export async function getDishes(req, res) {
   const dishes = await model.getDishes();
@@ -16,3 +17,10 @@ export async function getDishesByTag(req, res) {
   }
   res.status(200).json({ status: "success", data: dishes });
 }
+
+
+const PORT = process.env.PORT;
+
+app.listen(PORT, function () {
+  console.log(`Server listening on port ${PORT}`);
+});
