@@ -75,7 +75,11 @@ h6 {
 }
 
 body {
-	background-color: var(--dark-theme);
+	
+}
+.feed-div{
+    display: none;
+    background-color: var(--dark-theme);
 }
 
 .navbar {
@@ -93,6 +97,26 @@ body {
 	border-bottom: rgba(210, 210, 210, 0.336) 1px solid;
 	flex-direction: row;
 	z-index: 9999;
+}
+.landing-div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: var(--light-theme);
+height: 100vh;
+font-family: var(--title-font);
+
+}
+.landing-div :nth-child(4) {
+    width: 100vw;
+    bottom: 0px; 
+height: 200px;
+justify-self: flex-end;
+    
+background-color: var(--dark-theme);
+
 }
 
 .feed--logo {
@@ -155,3 +179,4 @@ body {
 	justify-self: center;
 	justify-content: center;
 }
+
