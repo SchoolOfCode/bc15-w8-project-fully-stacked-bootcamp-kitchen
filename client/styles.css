@@ -104,3 +104,7 @@ body {
 .feed--home-icon > g > g > path {
 	height: 66px;
 }
+.feed {
+    padding-top:  10rem; 
+    color: var(--orange-theme)
+}
