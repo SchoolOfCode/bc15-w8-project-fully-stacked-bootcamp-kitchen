@@ -1,6 +1,6 @@
 import express from "express";
 
-import * as controller from "../server/controller.js";
+import * as controller from "./server/controller.js";
 
 export const dishesRoutes = express.Router();
 
