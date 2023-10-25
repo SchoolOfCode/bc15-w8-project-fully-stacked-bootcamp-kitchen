@@ -22,6 +22,12 @@ const array = [
 	},
 ];
 
+//Fetch object
+
+// const res = await fetch("http://localhost:6006/dishes");
+// const recipes = await res.json();
+// const recipeArray = await recipes.data;
+
 array.map((obj) => {
 	document.querySelector(".feed").innerHTML += `
 
@@ -64,9 +70,8 @@ function handleToggle() {
 }
 
 const searchBox = document.querySelector(".search-box");
-let searchText
-
-searchBox.addEventListener("input", () => {
-    console.log(searchText)
-    return searchText = searchBox.value
+let searchText = (searchBox.oninput = () => {
+	return searchBox.value;
 });
+
+console.log(searchText);
