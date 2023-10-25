@@ -1,36 +1,8 @@
-//Dummy data for testing
-
-// const array = [
-// 	{
-// 		title: "Title 1",
-// 		img: "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
-// 		bodyText:
-// 			"Some xo quick example text to build on the card title and make up the bulk of the card's content.",
-// 		link: "#",
-// 	},
-// 	{
-// 		title: "Title 2",
-// 		img: "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
-// 		bodyText:
-// 			"Some quick example text to build on the card title and make up the bulk of the card's content.",
-// 		link: "#",
-// 	},
-// 	{
-// 		title: "Title 3",
-// 		img: "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
-// 		bodyText:
-// 			"Some quick xo example text to build on the card title and make up the bulk of the card's content.",
-// 		link: "#",
-// 	},
-// ];
-
 //Fetch object
 
 const res = await fetch("http://localhost:6006/dishes");
 const recipes = await res.json();
 const recipeArray = await recipes.data;
-
-console.log(recipeArray);
 
 //Toggling between landing and feed pages
 let toggle = true;
@@ -61,28 +33,43 @@ function handleToggle() {
 	}
 }
 
-// If we can get the value of the searchBox.value into the searchText this will automatically filter using the filter function below.
+//Search and render functions below #################################################################
 
-const searchBox = document.querySelector(".search-box");
+let searchBox = document.getElementById("search-input");
+// let btn = document.getElementById("search-click"); <--- If event input causing issues we can change searchBox to btn and input to click to only re-render on click
 let searchText = "";
 
+//Event listener to re-render Dom on input change
 searchBox.addEventListener("input", () => {
 	searchText = searchBox.value;
+	clearDom();
+	renderToDom();
 });
 
+//Clear te DOM before re-rendering new obj
+function clearDom() {
+	document.querySelector(".feed").innerHTML = "";
+}
+
 // Print card elements to the DOM
+function renderToDom() {
+	recipeArray
+		.filter(
+			(e) =>
+				e.title.toLowerCase().includes(`${searchText.toLowerCase()}`) ||
+				e.description.toLowerCase().includes(`${searchText.toLowerCase()}`) ||
+				e.tags.toLowerCase().includes(`${searchText.toLowerCase()}`)
+		)
+		.map((obj) => {
+			document.querySelector(".feed").innerHTML += `
 
-recipeArray
-	.filter((e) => e.description.includes(`${searchText}`))
-	.map((obj) => {
-		document.querySelector(".feed").innerHTML += `
-
-<div class="card container">
-  <img src="${obj.imageurl}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${obj.title}</h5>
-    <p class="card-text">${obj.description}</p>
-    <a href="${obj.link}" class="btn">Go somewhere</a>
-  </div>
-</div>`;
-	});
+			<div class="card container">
+			<img src="${obj.imageurl}" class="card-img-top" alt="...">
+			<div class="card-body">
+			<h5 class="card-title">${obj.title}</h5>
+			<p class="card-text">${obj.description}</p>
+			<a href="${obj.link}" class="btn">Go To Recipe</a>
+			</div>
+			</div>`;
+		});
+}
