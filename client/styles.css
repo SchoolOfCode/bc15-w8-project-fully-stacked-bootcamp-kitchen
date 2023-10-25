@@ -88,9 +88,11 @@ body {
 	margin: 0;
 	padding: 0;
 	padding-inline: 1rem;
-	padding-block: 1.5rem;
+	padding-block: 1rem;
 	background-color: #0b10168e;
 	border-bottom: rgba(210, 210, 210, 0.336) 1px solid;
+	flex-direction: row;
+	z-index: 9999;
 }
 
 .feed--logo {
@@ -105,46 +107,51 @@ body {
 	height: 66px;
 }
 
+.feed--header-text {
+	width: 200px;
+}
+
 .feed {
-    padding-top:  8rem; 
-    color: var(--orange-theme)
+	padding-top: 8rem;
+	color: var(--orange-theme);
 }
 
 .card {
-    background-color: var(--light-theme);
-    width: 90vw;
+	background-color: var(--light-theme);
+	width: 90vw;
+	margin-bottom: 1rem;
 }
 
 .card-body {
-    padding-inline: 0;
-    display: flex;
-    flex-direction: column;
+	padding-inline: 0;
+	display: flex;
+	flex-direction: column;
 }
 
 .card-img-top {
-    padding-top: 1rem;
+	padding-top: 1rem;
 }
 
 .card-title {
-    font-family: var(--title-font);
-    font-size: var(--font-size-title);
-    color: var(--dark-theme);
+	font-family: var(--title-font);
+	font-size: var(--font-size-title);
+	color: var(--dark-theme);
 }
 
 .card-text {
-    font-family: var(--body-font);
-    font-size: var(--font-size-body);
-    color: var(--dark-theme);
+	font-family: var(--body-font);
+	font-size: var(--font-size-body);
+	color: var(--dark-theme);
 }
 
 .btn {
-    background-color:var(--orange-theme);
-    border-color: var(--orange-theme);
-    font-family: var(--body-font);
-    color: var(--light-theme);
-    display: flex;
-    width: 50%;
-    align-self: center;
-    justify-self: center;
-    justify-content: center;
+	background-color: var(--orange-theme);
+	border-color: var(--orange-theme);
+	font-family: var(--body-font);
+	color: var(--light-theme);
+	display: flex;
+	width: 50%;
+	align-self: center;
+	justify-self: center;
+	justify-content: center;
 }
