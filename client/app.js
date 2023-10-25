@@ -34,3 +34,31 @@ array.map((obj) => {
   </div>
 </div>`;
 });
+
+let toggle = true;
+const searchButton = document.querySelector(".search-button");
+const homeButton = document.querySelector(".feed--home-icon");
+const feed = document.querySelector(".feed-div");
+const landingPage = document.querySelector(".landing-div");
+
+searchButton.addEventListener("click", () => {
+	toggle = false;
+	handleToggle();
+});
+
+homeButton.addEventListener("click", () => {
+	toggle = true;
+	handleToggle();
+});
+
+function handleToggle() {
+	if (toggle === true) {
+		landingPage.setAttribute("style", "display: flex");
+		feed.setAttribute("style", "display: none");
+	}
+
+	if (toggle === false) {
+		feed.setAttribute("style", "display: block");
+		landingPage.setAttribute("style", "display: none");
+	}
+}
