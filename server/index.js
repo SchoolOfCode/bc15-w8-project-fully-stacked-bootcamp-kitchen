@@ -1,13 +1,16 @@
-// Import the pg (node-postgres) library
 import pg from "pg";
+import dotenv from "dotenv";
 
-// Retrieve the database connection string from environment variables
+// Load environment variables from .env file
+dotenv.config();
+
+// Retrieve the database connection string from the environment variable
 const connectionString = process.env.DATABASE_URL;
 
 // Check if the connection string is not defined, and if so, throw an error
 if (!connectionString) {
   throw new Error(
-    "No DB_CONNECTION_STRING defined. Did you load in your env variables?"
+    "No DATABASE_URL defined. Did you load in your env variables?"
   );
 }
 
@@ -16,3 +19,4 @@ export const pool = new pg.Pool({
   // Pass the connection string to the pool, so it knows how to connect to your database
   connectionString,
 });
+
