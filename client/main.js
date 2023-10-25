@@ -1,6 +1,8 @@
+//Dummy data for testing
+
 const array = [
 	{
-		title: "Title yyy 1",
+		title: "Title 1",
 		img: "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
 		bodyText:
 			"Some xo quick example text to build on the card title and make up the bulk of the card's content.",
@@ -17,7 +19,7 @@ const array = [
 		title: "Title 3",
 		img: "https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400",
 		bodyText:
-			"Some quick example text to build on the card title and make up the bulk of the card's content.",
+			"Some quick xo example text to build on the card title and make up the bulk of the card's content.",
 		link: "#",
 	},
 ];
@@ -28,6 +30,8 @@ const array = [
 // const recipes = await res.json();
 // const recipeArray = await recipes.data;
 
+
+//Toggling between landing and feed pages
 let toggle = true;
 const searchButton = document.querySelector(".search-button");
 const homeButton = document.querySelector(".feed--home-icon");
@@ -56,14 +60,17 @@ function handleToggle() {
 	}
 }
 
+
+// If we can get the value of the searchBox.value into the searchText this will automatically filter using the filter function below.
+
 const searchBox = document.querySelector(".search-box");
-let searchText = "";
+let searchText = "xo";
 
 searchBox.addEventListener("input", () => {
 	searchText = searchBox.value;
 });
 
-// If we can get the value of the searchBox.value into the searchText this will automatically filter using the filter function below.
+// Print card elements to the DOM
 
 array
 	.filter((e) => e.bodyText.includes(`${searchText}`))
