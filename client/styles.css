@@ -1,2 +1,12 @@
 /* font-family: 'Bebas Neue', sans-serif;
 font-family: 'Montserrat', sans-serif; */
+
+:root {
+    --light-theme: #efe7df;
+    --dark-theme: #101820;
+    --orange-theme: #fd6c02;
+    --title-font: "Bebas Neue", sans-serif;
+    --body-font: "Montserrat", sans-serif;
+    --font-size-title: 32px;
+    --font-size-body: 16px;
+}
