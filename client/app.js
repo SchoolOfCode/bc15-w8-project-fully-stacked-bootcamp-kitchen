@@ -62,3 +62,11 @@ function handleToggle() {
 		landingPage.setAttribute("style", "display: none");
 	}
 }
+
+const searchBox = document.querySelector(".search-box");
+let searchText
+
+searchBox.addEventListener("input", () => {
+    console.log(searchText)
+    return searchText = searchBox.value
+});
