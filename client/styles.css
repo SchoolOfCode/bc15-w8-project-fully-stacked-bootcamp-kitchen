@@ -77,7 +77,6 @@ h6 {
 body {
 	background-color: var(--dark-theme);
 	overflow-x: hidden;
-
 }
 .feed-div {
 	display: none;
@@ -88,7 +87,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	justify-content: space-between;
 	margin: 0;
@@ -148,6 +147,8 @@ body {
     all: 
 } */
 .feed--logo {
+	height: 50px;
+	width: 50px;
 }
 
 .feed--home-icon {
@@ -166,12 +167,14 @@ body {
 .feed {
 	padding-top: 8rem;
 	color: var(--orange-theme);
+	overflow-x: hidden;
 }
 
 .card {
 	background-color: var(--light-theme);
 	width: 90vw;
-	margin-bottom: 1rem;
+	margin-bottom: 2.5rem;
+	margin-top: -1.5rem;
 }
 
 .card-body {
@@ -206,4 +209,41 @@ body {
 	align-self: center;
 	justify-self: center;
 	justify-content: center;
+}
+
+@media (min-width: 750px) {
+	.feed {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		zoom: 45%;
+		padding-top: 15rem;
+	}
+
+	.card-title {
+		font-size: 5rem;
+	}
+
+	.card-text {
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+
+	.btn {
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+}
+
+@media (max-height: 800px) {
+	.landing-div :nth-child(4) {
+		width: 100vw;
+		bottom: 0px;
+		height: 150px;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		background-color: var(--dark-theme);
+		display: flex;
+		padding-bottom: 2rem;
+	}
 }
