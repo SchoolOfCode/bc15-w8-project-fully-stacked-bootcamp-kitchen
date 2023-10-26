@@ -3,17 +3,16 @@ import { pool } from "../server/index.js";
 
 export async function getDishes() {
   // Query the database and return all dishes
-
   // Define the SQL query to fetch all dishes from the 'dishes' table
   const queryText = "SELECT * FROM dishes";
-
   // Use the pool object to send the query to the database
   const result = await pool.query(queryText);
-
   // The rows property of the result object contains the retrieved records
   return result.rows;
 }
 
+
+/*
 export async function getDishesByTag(tags) {
     // Query the database and return the dish with a matching id or null
 
@@ -27,4 +26,4 @@ export async function getDishesByTag(tags) {
 
     // The rows property of the result object contains the retrieved records
     return result.rows;
-  }
+  }*/
