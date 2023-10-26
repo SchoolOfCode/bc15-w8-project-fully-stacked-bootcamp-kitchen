@@ -6,6 +6,6 @@ export const dishesRoutes = express.Router();
 
 dishesRoutes.get("/", controller.getDishes);
 
-dishesRoutes.get("/:tags", controller.getDishesByTag);
+//dishesRoutes.get("/:tags", controller.getDishesByTag);
 
 

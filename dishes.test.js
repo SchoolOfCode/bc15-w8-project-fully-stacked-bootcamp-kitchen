@@ -1,12 +1,12 @@
 import { test, expect } from "vitest";
 import request from "supertest";
-import express from "express"; // Import Express
+//import express from "express"; // Import Express
 import app from "./client/app.js";
 import dishesRoutes from "./dishesRoutes.js";
 
-// app.use(express.json());
+//app.use(express.json());
 
-// app.use("/dishes", dishesRoutes);
+ //app.use("/dishes", dishesRoutes);
 
 test("GET /dishes", async () => {
 	const response = await request(app).get("/dishes");
@@ -16,3 +16,4 @@ test("GET /dishes", async () => {
 
 // Export your Express app so it can be used in your server
 //module.exports = app;
+

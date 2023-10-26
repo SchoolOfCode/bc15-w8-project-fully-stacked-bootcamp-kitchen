@@ -1,6 +1,6 @@
 //Fetch object
 
-const res = await fetch("http://localhost:6006/dishes");
+const res = await fetch("http://localhost:3000/dishes");
 const recipes = await res.json();
 const recipeArray = await recipes.data;
 
