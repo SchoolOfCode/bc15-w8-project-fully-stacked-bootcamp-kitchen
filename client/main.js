@@ -78,10 +78,4 @@ function renderToDom() {
 			</div>
 			</div>`;
 		});
-<<<<<<< HEAD
 }
-
-console.log(renderToDom);
-=======
-}
->>>>>>> 73dc6fe66b8e44a70c92cc869a847145cb53fe79
