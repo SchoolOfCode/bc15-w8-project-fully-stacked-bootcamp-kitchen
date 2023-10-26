@@ -23,6 +23,6 @@ export async function getDishesByTag(req, res) {
 
 const PORT = process.env.PORT;
 
-appListener.listen(PORT, function () {
+app.listen(PORT, function () {
 	console.log(`Server listening on port ${PORT}`);
 });
