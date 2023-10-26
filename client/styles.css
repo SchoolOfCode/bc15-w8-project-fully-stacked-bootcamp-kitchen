@@ -219,18 +219,26 @@ body {
 		padding-top: 15rem;
 	}
 
+	div.card-body {
+		height: 100%;
+	}
+
 	.card-title {
 		font-size: 5rem;
 	}
 
 	.card-text {
 		font-size: 2rem;
-		padding-bottom: 1rem;
+		padding-bottom: 7rem;
 	}
 
 	.btn {
 		font-size: 2rem;
 		padding-bottom: 1rem;
+		margin-bottom: 0rem;
+		position: absolute;
+		bottom: 2rem;
+		justify-self: flex-end;
 	}
 }
 

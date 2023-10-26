@@ -79,3 +79,5 @@ function renderToDom() {
 			</div>`;
 		});
 }
+
+console.log(renderToDom);
