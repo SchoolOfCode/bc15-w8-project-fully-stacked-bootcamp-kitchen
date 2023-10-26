@@ -171,7 +171,8 @@ body {
 .card {
 	background-color: var(--light-theme);
 	width: 90vw;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
+	margin-top: -1rem;
 }
 
 .card-body {
