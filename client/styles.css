@@ -87,7 +87,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	justify-content: space-between;
 	margin: 0;
@@ -165,6 +165,7 @@ body {
 .feed {
 	padding-top: 8rem;
 	color: var(--orange-theme);
+	overflow-x: hidden;
 }
 
 .card {
@@ -211,5 +212,35 @@ body {
 	.feed {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		zoom: 45%;
+		padding-top: 15rem;
+	}
+
+	.card-title {
+		font-size: 5rem;
+	}
+
+	.card-text {
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+
+	.btn {
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+}
+
+@media (max-height: 800px) {
+	.landing-div :nth-child(4) {
+		width: 100vw;
+		bottom: 0px;
+		height: 150px;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		background-color: var(--dark-theme);
+		display: flex;
+		padding-bottom: 2rem;
 	}
 }
