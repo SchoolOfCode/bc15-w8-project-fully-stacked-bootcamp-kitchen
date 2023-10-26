@@ -10,7 +10,7 @@ test("testing testing", async function ({page}) {
     await expect(locateHeading).toBeVisible();
 
     //user test for input in search box
-    const searchInput = page.locator(`input[placeholder="search meal"]`);
+    const searchInput = page.locator(`input[placeholder="Discover a new meal..."]`);
     await searchInput.type("Chicken");
     await expect(searchInput).toHaveValue("Chicken");
 
