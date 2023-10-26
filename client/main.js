@@ -62,13 +62,14 @@ function renderToDom() {
 		)
 		.map((obj) => {
 			document.querySelector(".feed").innerHTML += `
-
-			<div class="card container">
+			<div class="row">
+			<div class="card container col-sm-10 ">
 			<img src="${obj.imageurl}" class="card-img-top" alt="...">
 			<div class="card-body">
 			<h5 class="card-title">${obj.title}</h5>
 			<p class="card-text">${obj.description}</p>
 			<a href="${obj.link}" class="btn">Go To Recipe</a>
+			</div>
 			</div>
 			</div>`;
 		});

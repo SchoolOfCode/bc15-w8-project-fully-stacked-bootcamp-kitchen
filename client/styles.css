@@ -77,7 +77,6 @@ h6 {
 body {
 	background-color: var(--dark-theme);
 	overflow-x: hidden;
-
 }
 .feed-div {
 	display: none;
@@ -206,4 +205,11 @@ body {
 	align-self: center;
 	justify-self: center;
 	justify-content: center;
+}
+
+@media (min-width: 750px) {
+	.feed {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
 }
