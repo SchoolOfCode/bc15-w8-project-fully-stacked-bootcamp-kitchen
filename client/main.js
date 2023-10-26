@@ -55,7 +55,7 @@ function clearDom() {
 // Print card elements to the DOM
 function renderToDom() {
 	const searchWords = searchText.toLowerCase().split(" ");
-	
+
 	recipeArray
 		.filter((e) => {
 			return searchWords.every(
@@ -65,7 +65,7 @@ function renderToDom() {
 					e.tags.toLowerCase().includes(word)
 			);
 		})
-		.map((obj) => {
+		.forEach((obj) => {
 			document.querySelector(".feed").innerHTML += `
 			<div class="row">
 			<div class="card container col-sm-10 ">
