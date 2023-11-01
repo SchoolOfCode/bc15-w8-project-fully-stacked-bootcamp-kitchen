@@ -1,6 +1,6 @@
 //Fetch object
 
-const res = await fetch(`http://localhost:6006/dishes`);
+const res = await fetch(`https://bootcamp-kitchen.onrender.com/dishes`);
 const recipes = await res.json();
 const recipeArray = await recipes.data;
 
@@ -15,6 +15,8 @@ searchButton.addEventListener("click", () => {
 	toggle = false;
 	handleToggle();
 });
+
+// xxxx
 
 homeButton.addEventListener("click", () => {
 	toggle = true;
