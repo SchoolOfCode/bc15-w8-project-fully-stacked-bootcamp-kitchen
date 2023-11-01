@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"start": "node controller.js",
+		"start": "node app.js",
 		"dev": "nodemon -r dotenv/config server/controller.js",
 		"test": "vitest"
 	},
