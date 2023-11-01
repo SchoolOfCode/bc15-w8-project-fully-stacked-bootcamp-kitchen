@@ -36,7 +36,7 @@ function handleToggle() {
 //Search and render functions below #################################################################
 
 let searchBox = document.getElementById("search-input");
-// let btn = document.getElementById("search-click"); <--- If event input causing issues we can change searchBox to btn and input to click to only re-render on click
+
 let searchText = "";
 renderToDom();
 //Event listener to re-render Dom on input change

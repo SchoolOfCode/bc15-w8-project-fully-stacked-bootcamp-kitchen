@@ -3,7 +3,7 @@ import express from "express";
 // Import "morgan" middleware for logging
 import morgan from "morgan";
 // Import "dishesRoutes" from an external file
-import { dishesRoutes } from "../dishesRoutes.js";
+import { dishesRoutes } from "./dishesRoutes.js";
 // Import "cors" middleware for handling cross-origin requests
 import cors from "cors";
 
@@ -24,7 +24,7 @@ const PORT = process.env.PORT;
 
 // Start Express server & listen on the specified port
 app.listen(PORT, function () {
-    console.log(`Server listening on port ${PORT}`);
+	console.log(`Server listening on port ${PORT}`);
 });
 
 // Export the Express app to be used in other parts of the application

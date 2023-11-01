@@ -7,11 +7,4 @@ export const dishesRoutes = express.Router();
 // Define a route that handles GET requests for the "/dishes" endpoint
 dishesRoutes.get("/", controller.getDishes);
 
-
-
-
-
-
 //dishesRoutes.get("/:tags", controller.getDishesByTag);
-
-
