@@ -21,6 +21,7 @@ app.use("/dishes", dishesRoutes);
 
 // Get port from environment variables
 const PORT = process.env.PORT;
+const HOST = process.env.HOST;
 
 // Start Express server & listen on the specified port
 app.listen(PORT, function () {

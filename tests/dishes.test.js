@@ -3,7 +3,7 @@ import { test, expect } from "vitest";
 // Import the request function from the "supertest" library
 import request from "supertest";
 // Import the "app" module from the "./client/app.js" file
-import app from "../client/app.js";
+import app from "../server/app.js";
 
 // Define a test case named "GET /dishes"
 //Send a GET request to the "/dishes" endpoint using the "app" instance
